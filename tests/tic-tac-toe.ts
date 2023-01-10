@@ -7,6 +7,7 @@ import { expect } from 'chai';
 chai.use(chaiAsPromised);
 
 async function play(program: Program<TicTacToe>, game, player, tile, expectedTurn, expectedGameState, expectedBoard) {
+  console.log("Program: ", program);
   await program.methods
     .play(tile)
     .accounts({
